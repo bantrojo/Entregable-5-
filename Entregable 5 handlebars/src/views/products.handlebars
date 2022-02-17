@@ -1,0 +1,26 @@
+<body style="background-color:#E9DAC1;">
+  
+
+{{#if products}}
+<h1 style="text-align:center">Product List</h1>
+<div class="row justify-content-center">
+ <a href="./" class="class product-text">Load Form</a>
+    </div>
+ <div class="d-flex flex-wrap justify-content-center">
+  {{#each products}}
+      <div class="card" style="margin-right: 10%; margin-left:10%">
+        <img src="{{this.pImg}}" style="width: 20rem;"  alt="..." />
+        <div class="card-body">
+          
+          <p class="card-title text-center">-{{this.title}}</p>
+          
+          <p class="card-text text-center">-${{this.price}}</p>
+        </div>
+      </div> 
+  {{/each}}
+{{else}}
+  <h2 style="text-align: center;"">Product not found</h2>
+    </div>
+{{/if}}
+
+</body>
